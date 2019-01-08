@@ -7,8 +7,8 @@ Vagrant.configure('2') do |config|
   config.vm.synced_folder './', '/vagrant'
 
  config.vm.define 'jar' do |jar|
-    # jar.vm.network :forwarded_port, guest: 8080, host: 8080
-    #jar.vm.network :forwarded_port, guest: 80, host: 80
+    jar.vm.network :forwarded_port, guest: 8080, host: 8080
+    jar.vm.network :forwarded_port, guest: 80, host: 80
 
     jar.vm.provider :virtualbox do |vb|
       vb.name = 'dropwizard-jar'
