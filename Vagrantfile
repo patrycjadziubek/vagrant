@@ -34,7 +34,6 @@ Vagrant.configure('2') do |config|
 	cd /app/hello-dropwizard
 	sudo mvn package
 	sudo java -jar target/hello-dropwizard-1.0-SNAPSHOT.jar server example.yaml >/dev/null 2>&1 &
-	sudo service apache2 reload
       SHELL
     end
   end
